@@ -1,44 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="stylesheet" href="./css/styles.css" />
 
-  Bill
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 14px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(0, 0%, 100%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1 class="title">SPLI<br />TTER</h1>
+      <div class="card-container">
+        <div class="card">
+          <div class="calculation">
+            <div class="calculation-row">
+              <h6 class="card-title">Bill</h6>
+              <div class="input-container">
+                <img src="./images/icon-dollar.svg" alt="dollar" />
+                <input type="text" class="bill-input" />
+              </div>
+            </div>
+            <div class="calculation-row">
+              <h6 class="card-title">Select Tip %</h6>
+              <div class="tip-container">
+                <div class="tip-box">5%</div>
+                <div class="tip-box">10%</div>
+                <div class="tip-box">15%</div>
+                <div class="tip-box">25%</div>
+                <div class="tip-box">50%</div>
+                <input class="tip-box" type="text" placeholder="Custom" />
+              </div>
+            </div>
+            <div class="calculation-row">
+              <h6 class="card-title">Number of People</h6>
+              <div class="input-container">
+                <img src="./images/icon-person.svg" alt="dollar" />
+                <input type="text" class="bill-input" />
+              </div>
+            </div>
+          </div>
+          <div class="output">
+            <div class="output-row">
+              <div class="output-content">
+                <h6 class="output-title">Tip Amount</h6>
+                <p class="output-subtitle">/ person</p>
+              </div>
+              <h4 class="output-amount">$4.27</h4>
+            </div>
+            <div class="output-row">
+              <div class="output-content">
+                <h6 class="output-title">Total</h6>
+                <p class="output-subtitle">/ person</p>
+              </div>
+              <h4 class="output-amount">$32.79</h4>
+            </div>
+            <button class="btn-reset">Reset</button>
+          </div>
+        </div>
+      </div>
+    </main>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <footer class="footer">
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Novianto</a>.
+      </div>
+    </footer>
+  </body>
 </html>
