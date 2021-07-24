@@ -4,6 +4,7 @@ const peopleInput = document.querySelector('.people');
 const customInput = document.querySelector('.custom');
 const amount = document.querySelector('.amount');
 const total = document.querySelector('.total');
+const btnReset = document.querySelector('.btn-reset');
 const peopleError = document.querySelector('.people-error');
 const billError = document.querySelector('.bill-error');
 
@@ -12,9 +13,9 @@ let tipPercentage = 0;
 tipBoxs.forEach((box) => {
   box.addEventListener('click', () => {
     activeBox(box);
-    customInput.value = "";
+    customInput.value = '';
     tipPercentage = +box.innerText.slice(0, -1);
-    
+
     if (InputsIsValid()) {
       displayBillAndTotal();
     }
@@ -33,7 +34,7 @@ billInput.addEventListener('input', (e) => {
 
 customInput.addEventListener('input', (e) => {
   tipPercentage = +e.target.value;
-  console.log(InputsIsValid());
+
   if (InputsIsValid()) {
     displayBillAndTotal();
   }
@@ -47,6 +48,13 @@ peopleInput.addEventListener('input', (e) => {
   if (InputsIsValid()) {
     displayBillAndTotal();
   }
+});
+
+btnReset.addEventListener('click', () => {
+  billInput.value = peopleInput.value = customInput.value = '';
+  amount.innerText = total.innerText = '$0.00';
+  const activeBox = document.querySelector('.tip-box.active');
+  activeBox.classList.remove("active");
 });
 
 function checkError(element, value) {

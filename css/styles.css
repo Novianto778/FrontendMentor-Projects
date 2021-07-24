@@ -187,7 +187,7 @@ input.tip-box {
   width: 10px;
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 578px) {
   .card {
     flex-direction: column;
   }
