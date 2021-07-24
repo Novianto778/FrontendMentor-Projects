@@ -33,10 +33,13 @@
         <div class="card">
           <div class="calculation">
             <div class="calculation-row">
-              <h6 class="card-title">Bill</h6>
+              <div class="card-title-container">
+                <h6 class="card-title">Bill</h6>
+                <p class="error bill-error"></p>
+              </div>
               <div class="input-container">
                 <img src="./images/icon-dollar.svg" alt="dollar" />
-                <input type="text" class="bill-input" />
+                <input type="text" class="bill-input bill" />
               </div>
             </div>
             <div class="calculation-row">
@@ -47,14 +50,21 @@
                 <div class="tip-box">15%</div>
                 <div class="tip-box">25%</div>
                 <div class="tip-box">50%</div>
-                <input class="tip-box" type="text" placeholder="Custom" />
+                <input
+                  class="tip-box custom"
+                  type="text"
+                  placeholder="Custom"
+                />
               </div>
             </div>
             <div class="calculation-row">
-              <h6 class="card-title">Number of People</h6>
+              <div class="card-title-container">
+                <h6 class="card-title">Number of People</h6>
+                <p class="error people-error"></p>
+              </div>
               <div class="input-container">
                 <img src="./images/icon-person.svg" alt="dollar" />
-                <input type="text" class="bill-input" />
+                <input type="text" class="bill-input people" />
               </div>
             </div>
           </div>
@@ -64,14 +74,14 @@
                 <h6 class="output-title">Tip Amount</h6>
                 <p class="output-subtitle">/ person</p>
               </div>
-              <h4 class="output-amount">$4.27</h4>
+              <h4 class="output-number amount">$0.00</h4>
             </div>
             <div class="output-row">
               <div class="output-content">
                 <h6 class="output-title">Total</h6>
                 <p class="output-subtitle">/ person</p>
               </div>
-              <h4 class="output-amount">$32.79</h4>
+              <h4 class="output-number total">$0.00</h4>
             </div>
             <button class="btn-reset">Reset</button>
           </div>
@@ -87,5 +97,6 @@
         >. Coded by <a href="#">Novianto</a>.
       </div>
     </footer>
+    <script src="./js/index.js"></script>
   </body>
 </html>

@@ -9,9 +9,11 @@
   --primary-cyan: hsl(172, 67%, 45%);
   --primary-dark-cyan: hsl(183, 100%, 15%);
   --secondary-dark-cyan: hsl(186, 14%, 43%);
+  --active-dark-cyan: hsl(184, 14%, 56%);
+  --active-light-cyan: hsl(189, 41%, 97%);
   --secondary-light-cyan: hsl(185, 41%, 84%);
   --white: hsl(0, 0%, 100%);
-  --gray: #e9e9e9;
+  --gray: #f3f3f3;
 }
 
 body {
@@ -56,21 +58,40 @@ footer {
 }
 
 .card-title {
-  font-size: 18px;
+  font-size: 14px;
   color: var(--secondary-dark-cyan);
   margin-bottom: 4px;
+}
+
+.card-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  font-weight: 700;
 }
 
 input {
   background-color: var(--gray);
   border: none;
   outline: none;
-  font-size: 16px;
+  font-size: 14px;
   text-align: end;
   width: 100%;
-  height: 28px;
-  padding: 8px;
+  padding: 12px;
   border-radius: 4px;
+  font-weight: 700;
+  color: var(--primary-dark-cyan);
+  font-family: 'Space Mono', sans-serif;
+}
+
+input.bill-input {
+  font-size: 22px;
+  height: 40px;
 }
 
 .calculation {
@@ -92,6 +113,11 @@ input {
   border-radius: 4px;
   font-weight: 700;
   cursor: pointer;
+}
+
+.tip-box.active {
+  background-color: var(--primary-cyan);
+  color: var(--primary-dark-cyan);
 }
 
 input.tip-box {
@@ -128,7 +154,7 @@ input.tip-box {
   font-size: 12px;
 }
 
-.output-amount {
+.output-number {
   font-size: 28px;
   margin-left: 36px;
   color: var(--primary-cyan);
@@ -146,6 +172,7 @@ input.tip-box {
   margin-top: 32px;
   font-size: 18px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .input-container {
@@ -160,7 +187,7 @@ input.tip-box {
   width: 10px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 375px) {
   .card {
     flex-direction: column;
   }
